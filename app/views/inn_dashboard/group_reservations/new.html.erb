@@ -1,0 +1,27 @@
+<h2>Criando uma Reserva para um Grupo</h2>
+
+<%= form_with(model: @group_reservation, url: inn_dashboard_inns_group_reservations_path) do |f| %>
+
+    <div class="mb-3">
+        <%= f.label :name, class: "form-label" %>
+        <%= f.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+        <%= f.label :number_of_guests, class: "form-label" %>
+        <%= f.number_field :number_of_guests, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+        <%= f.label :start_date, class: "form-label" %>
+        <%= f.date_field :start_date %>
+    </div>
+
+    <div class="mb-3">
+        <%= f.label :end_date, class: "form-label" %>
+        <%= f.date_field :end_date %>
+    </div>
+
+    <%= f.submit 'Criar Reserva', class: 'btn btn-success' %>
+
+<% end %>
